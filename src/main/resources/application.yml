@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hotel?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+
+server:
+  port: 8888
+  servlet:
+    context-path: /hotel
+
+logging:
+  level:
+    com.oaec.springbootmybatis: trace
+  file: E:\logs\hotel.log
