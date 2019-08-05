@@ -16,3 +16,8 @@ logging:
   level:
     com.hadron.hotelmanage: trace
   file: E:\logs\hotel.log
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.hadron.hotelmanage.entities
+  mapper-locations: classpath:mappers/*.xml

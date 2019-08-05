@@ -19,7 +19,7 @@ import java.util.Arrays;
 @Aspect
 public class AllAspect {
     private Logger logger = LoggerFactory.getLogger(AllAspect.class);
-    @Pointcut("execution(public * com.hadron.hotelmanage.controller.HelloController.*(..))")
+    @Pointcut("execution(public * com.hadron.hotelmanage.controller.*.*(..))")
     public void log(){}
     //AOP的前置通知
     @Before("log()")
