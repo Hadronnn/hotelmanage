@@ -5,8 +5,8 @@
 
 <mapper namespace="com.hadron.hotelmanage.mappers.UserMapper">
     
-    <select id="queryAll" resultType="user">
-        SELECT * FROM sys_user WHERE status = 1
+    <select id="queryAll" resultType="map">
+        SELECT su.*,sr.name FROM sys_user su,sys_user_role sur,sys_role sr WHERE su.user_id=sur.user_id AND sur.role_id=sr.role_id AND su.status = 1 ORDER BY su.user_id
     </select>
     
     <select id="queryByUsername" resultType="user">

@@ -5,6 +5,7 @@ import com.hadron.hotelmanage.entities.User;
 import com.hadron.hotelmanage.mappers.ManagerMapper;
 import com.hadron.hotelmanage.mappers.UserMapper;
 import com.hadron.hotelmanage.service.ManagerService;
+import com.hadron.hotelmanage.service.UserService;
 import com.hadron.hotelmanage.util.MD5Util;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,12 +23,14 @@ import java.util.Map;
 public class HotelmanageApplicationTests {
 
     @Autowired
-    private ManagerService managerService;
+    private UserService userService;
 
     @Test
     public void contextLoads() {
-        List<Permission> permissions = managerService.queryByUserId(2);
-        System.out.println("permissions = " + permissions);
+        List<Map<String, Object>> list = userService.list();
+        for (Map<String, Object> map : list) {
+            System.out.println("map = " + map);
+        }
     }
 
 }

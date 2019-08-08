@@ -2,6 +2,9 @@ package com.hadron.hotelmanage.service;
 
 import com.hadron.hotelmanage.entities.User;
 
+import java.util.List;
+import java.util.Map;
+
 
 /**
  * @Author Hadron
@@ -15,4 +18,10 @@ public interface UserService {
      * @return
      */
     User login(String username, String password);
+
+    /**
+     * 查询所有管理员
+     * @return
+     */
+    List<Map<String,Object>> list();
 }

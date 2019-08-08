@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Author Hadron
@@ -31,5 +32,5 @@ public interface UserMapper {
      * 查询全部
      * @return
      */
-    List<User> queryAll();
+    List<Map<String,Object>> queryAll();
 }

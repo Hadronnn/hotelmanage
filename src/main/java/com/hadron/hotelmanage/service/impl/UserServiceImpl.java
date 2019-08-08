@@ -9,6 +9,9 @@ import com.hadron.hotelmanage.util.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @Author Hadron
  * @date 2019/8/5 15:17
@@ -36,5 +39,14 @@ public class UserServiceImpl implements UserService {
             throw new LoginException(ExceptionCode.INVALID_PASSWORD);
         }
         return user;
+    }
+
+    /**
+     * 查询所有管理员
+     * @return
+     */
+    @Override
+    public List<Map<String, Object>> list() {
+        return userMapper.queryAll();
     }
 }

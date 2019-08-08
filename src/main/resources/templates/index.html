@@ -85,7 +85,7 @@
                         <ul th:each="permission1 : ${permission.permissions}" class="sub-menu">
                             <li>
                                 <a  th:menu-name="${permission1.name}" th:menu-url="${permission1.url}"
-                                        onclick="xadmin.add_tab(this.getAttribute('menu-name'),this.getAttribute('menu-url'))">
+                                        onclick="xadmin.add_tab(this.getAttribute('menu-name'),'/hotel'+this.getAttribute('menu-url'))">
                                     <i th:text="${permission1.icon}" class="iconfont">&#xe6a7;</i>
                                     <cite  th:text="${permission1.name}">统计页面</cite></a>
                             </li>
