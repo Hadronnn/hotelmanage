@@ -16,7 +16,6 @@ public class User {
     private Integer status;
     private Timestamp createTime;
 
-
     @Override
     public String toString() {
         return "User{" +
