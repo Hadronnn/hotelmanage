@@ -14,4 +14,8 @@
         WHERE parent_id != 0
     </select>
 
+    <select id="queryAll" resultType="role">
+        SELECT * FROM sys_role WHERE status = 1;
+    </select>
+
 </mapper>

@@ -1,6 +1,7 @@
 package com.hadron.hotelmanage.service.impl;
 
 import com.hadron.hotelmanage.entities.Permission;
+import com.hadron.hotelmanage.entities.Role;
 import com.hadron.hotelmanage.mappers.ManagerMapper;
 import com.hadron.hotelmanage.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,5 +35,10 @@ public class ManagerServiceImpl implements ManagerService {
             permission.setPermissions(permissions);
         }
         return list;
+    }
+
+    @Override
+    public List<Role> queryAll() {
+        return managerMapper.queryAll();
     }
 }

@@ -1,6 +1,7 @@
 package com.hadron.hotelmanage.service;
 
 import com.hadron.hotelmanage.entities.Permission;
+import com.hadron.hotelmanage.entities.Role;
 
 import java.util.List;
 
@@ -10,4 +11,6 @@ import java.util.List;
  */
 public interface ManagerService {
     List<Permission> queryByUserId(Integer userId);
+
+    List<Role> queryAll();
 }
